@@ -1,4 +1,8 @@
-**Theorem.** The set of natural numbers equal to the sum of the factorials of their own decimal digits is exactly $\{1, 2, 145, 40585\}$. That is, defining $f(n) = \sum_{d \,\in\, \text{digits}(n)} d!$, we have
-$$\{ n \in \mathbb{N} \mid f(n) = n \} = \{1, 2, 145, 40585\}.$$
+**Theorem.** The set of natural numbers equal to the sum of the factorials of their own digits is exactly $\{1, 2, 145, 40585\}$. That is, defining $S(n)$ as the sum of the factorials of the decimal digits of $n$, we have
+$$\{ n \in \mathbb{N} \mid S(n) = n \} = \{1,\, 2,\, 145,\, 40585\}.$$
 
-*Proof.* Unsolved.
+*Proof.* We show the two containments separately.
+
+$(\subseteq)$ Let $n \in \mathbb{N}$ satisfy $S(n) = n$. By \textbf{Upper Bound}, any such $n$ satisfies $n \leq 2540160$. Since $n$ is bounded, \textbf{Finite Verification} applies and yields that $S(n) = n$ if and only if $n \in \{1, 2, 145, 40585\}$; the forward direction then places $n$ in that finite set.
+
+$(\supseteq)$ Let $n \in \{1, 2, 145, 40585\}$. A direct numerical check confirms $n \leq 2540160$ for each element, so \textbf{Finite Verification} again applies; its reverse direction yields $S(n) = n$. $\blacksquare$
